@@ -1,2 +1,2 @@
 # Estadistica-2019
-En este repositorio se cargaran los ejercicios resueltos de la clase de estadistica
+# En este repositorio tiene como objetivo cargar los ejercicios resueltos de la clase de estadistica
