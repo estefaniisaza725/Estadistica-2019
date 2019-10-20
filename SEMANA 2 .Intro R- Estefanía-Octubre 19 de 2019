@@ -1,0 +1,75 @@
+SEMANA 2
+Práctica 1 - Introducción al lenguaje de programacíon en R
+
+**1°Ejer:**
+Reasigne 5 a la letra *z*, usando el operador *<-*, ahora, pregunte ¿qué es *z*?
+
+4 -> z
+z<-5
+5
+
+**2°Ejer:**
+Revisemos qué es rnorm(1). Empecemos buscando la función en help o ?rnorm
+
+?rnorm
+rnorm(1)
+
+**3°Ejer:** 
+multiplique *x* por 2 y sumele 1 y dividalo por 1.5, ese resultado elevelo al cuadrado. Esto se escribe igual que en una calculadora manual.
+
+x <- 1:10
+solucion<-((((x*2)+1)/1.5)^2)
+#tener en cuenta la cantidad de parentesis al inicio y al final del comando ,debido a que si estan mal R no los lee
+
+*4°Ejer:** 
+tome cualquier objeto anterior y preguntele la clase
+
+logicos <- c(T,F,TRUE,FALSE)
+class(logicos)
+
+**5°Ejer:** 
+¿Qué clase tiene el vector?
+
+prueba <- c(1, "perro", FALSE, "gato", 1.5)
+class(prueba)
+
+**6°Ejer:**
+Hasta el momento hemnos generado varios vectores/objetos/variables, podemos listarlas usando la función ls() o ls.str(), la cual nos permite, no solo ver las variables, sino el tipo de cada una.
+
+ls()
+ls.str
+
+**7°Ejer:** 
+Cree un una secuencia que repita los números de 1 a 4, 3 veces y asignela a un objeto llamado vector1. Ahora, cree una secuencia de números pares del 2 al 24 y asignela a un objeto llamado vector2. Gnere un arreglo con ambos vectores y busque la columna 2, fila 1 de la segunda matriz y para la primera.
+
+vector1 <- rep(1:3, 3)
+vector2 <- seq (2, 24, 2)
+arreglo <-array(data = c(vector1,vector2),dim = c(3,4,2))
+#Para tomar la columna 2, fila 1 de la segunda matriz y para la primera.
+arreglo [1,2,2]
+
+**8°Ejer:**  
+Tome la primera columna  y la segunda, concatenelas con c() ¿Qué encuentra?
+Ahora, tome amabas columnas y use la funcion cbind(), asignelo a un objeto llamado minuevatabla.
+Haga lo mismo, con las filas del 1:5 y del 10:30, use primero c() y luego rbind() ¿Qué encuentra? 
+
+#primeramente se caragn los datos
+data(iris)
+
+c(iris[,1],iris[,2])
+c(iris$Sepal.Length, iris$Sepal.Width)
+minuevatabla<- c(iris$Sepal.Length, iris$Sepal.Width)
+
+# Concatenando las filas del 1:5 y del 10:30
+nuevodata1<-c(iris[1:5,],iris[10:30,])
+nuevodata2rbind(iris[1:5,],iris[10:30,])
+
+**Ejercicio final**
+Busque el archivo suministrado por el profesor, carguelo a R y revise qué contien. Extraiga las 5 primeras columnas con las 10 primeras filas, escriba esa nueva matriz como csv en su computador.
+
+#se realizaron los cambios al documento de excel y se guardo el archivo como CSV para que pudiera ser leido por R
+MATRIX<-read.csv("C://Users/estef/Desktop/4° SEMESTRE 2019-2/ESTADISTICA/RSTUDIO TRABAJOS ESTEFANÍA/Copia de Matrix_Multivariate_Megard.csv")
+
+SEMANA1<- MATRIX[1:10,1:5]
+#Para guardar la nueva matriz
+write.csv(x = MATRIX,file = 'Minimatriz.csv')
