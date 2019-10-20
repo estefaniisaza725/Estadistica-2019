@@ -72,4 +72,4 @@ MATRIX<-read.csv("C://Users/estef/Desktop/4° SEMESTRE 2019-2/ESTADISTICA/RSTUDI
 
 SEMANA2<- MATRIX[1:10,1:5]
 #Para guardar la nueva matriz
-write.csv(x = MATRIX,file = 'Minimatriz.csv')
+write.csv(x = SEMANA2,file="Minimatriz.csv"
