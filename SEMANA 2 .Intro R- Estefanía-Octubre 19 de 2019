@@ -70,6 +70,6 @@ Busque el archivo suministrado por el profesor, carguelo a R y revise qué conti
 #se realizaron los cambios al documento de excel y se guardo el archivo como CSV para que pudiera ser leido por R
 MATRIX<-read.csv("C://Users/estef/Desktop/4° SEMESTRE 2019-2/ESTADISTICA/RSTUDIO TRABAJOS ESTEFANÍA/Copia de Matrix_Multivariate_Megard.csv")
 
-SEMANA1<- MATRIX[1:10,1:5]
+SEMANA2<- MATRIX[1:10,1:5]
 #Para guardar la nueva matriz
 write.csv(x = MATRIX,file = 'Minimatriz.csv')
