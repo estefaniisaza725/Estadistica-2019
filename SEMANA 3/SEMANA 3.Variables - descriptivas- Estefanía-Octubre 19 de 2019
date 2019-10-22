@@ -48,4 +48,83 @@ paste(F,'/',M,sep = '')
  F/M
  #esto ultimo da como resultado 1 lo que indica que por cada macho hay una hembra
  
- 
+ *4°EJER**
+usando el data.frame *tortues* calcule la proporción entre el ancho y el largo del caparazón, genere una tabla con la información de *tortues* y la nueva variable derivada
+tortues
+
+ANCHO<-tortues$larg
+LARGO<-tortues$long
+PROPORCION<-ANCHO/LARGO
+ANCHO_LARGO<-cbind(ANCHO,LARGO,PROPORCION)
+ANCHO LARGO PROPORCION
+[1,]    74    93  0.7956989
+[2,]    78    94  0.8297872
+[3,]    80    96  0.8333333
+[4,]    84   101  0.8316832
+[5,]    85   102  0.8333333
+[6,]    81   103  0.7864078
+[7,]    83   104  0.7980769
+[8,]    83   106  0.7830189
+[9,]    82   107  0.7663551
+[10,]    89   112  0.7946429
+[11,]    88   113  0.7787611
+[12,]    86   114  0.7543860
+[13,]    90   116  0.7758621
+[14,]    90   117  0.7692308
+[15,]    91   117  0.7777778
+[16,]    93   119  0.7815126
+[17,]    89   120  0.7416667
+[18,]    93   120  0.7750000
+[19,]    95   121  0.7851240
+[20,]    93   125  0.7440000
+[21,]    96   127  0.7559055
+[22,]    95   128  0.7421875
+[23,]    95   131  0.7251908
+[24,]   106   135  0.7851852
+[25,]    81    98  0.8265306
+[26,]    84   103  0.8155340
+[27,]    86   103  0.8349515
+[28,]    86   105  0.8190476
+[29,]    88   109  0.8073394
+[30,]    92   123  0.7479675
+[31,]    95   123  0.7723577
+[32,]    99   133  0.7443609
+[33,]   102   133  0.7669173
+[34,]   105   133  0.7894737
+[35,]   100   134  0.7462687
+[36,]   102   136  0.7500000
+[37,]    98   137  0.7153285
+[38,]    99   138  0.7173913
+[39,]   105   141  0.7446809
+[40,]   108   147  0.7346939
+[41,]   107   149  0.7181208
+[42,]   107   153  0.6993464
+[43,]   115   155  0.7419355
+[44,]   117   155  0.7548387
+[45,]   115   158  0.7278481
+[46,]   118   159  0.7421384
+[47,]   124   162  0.7654321
+[48,]   132   177  0.7457627
+
+*5°Ejer**
+Cuántas especies de *Corvus* fueron muestreadas en la región Paleártica-Africana? Use el data.frame del género *Corvus*. ¿Qué porcentaje de *Corvus* muestreados habitan zonas abiertas
+
+#primeramente calculamos el total de las muestras en todas las regiones , para observar asi cuantas obtuvo paleartica tambien#
+cant_de_muestras<-table(corvus$phylog)
+cant_de_muestras
+#en paleartica fueron muestreadas 9 especies#
+
+#ahora bien, para la cantidad de corvus muestreados en zonas abiertas usamos el siguiente comanado#
+zonas_abiertas<-table(corvus$habitat)
+zonas_abiertas
+clos open 
+11   17 
+
+#esto nos dice que fueron muestreados en zonas abiertas 17 especies
+#para hallar el porcentaje respecto a toda la muestra utilizamos
+porcentaje_open<-prop.table(zonas_abiertas*100)
+porcentaje_open
+clos      open 
+0.3928571 0.6071429 
+
+**6ejer** ¿Cómo luce el gráfico de frecuencias para los tipos de hábitat del género *Corvus*?
