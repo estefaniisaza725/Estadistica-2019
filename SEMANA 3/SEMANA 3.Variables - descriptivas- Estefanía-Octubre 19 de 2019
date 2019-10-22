@@ -1,0 +1,51 @@
+SEMANA 3
+TEMA::VARIABLES Y FRECUENCIAS
+
+1°Ejer:**
+¿Que clase de objeto es BIC? ¿Qué clase de objeto es geospiza? use la función *str* para obtener información sobre la estructura.
+
+class(BIC)
+class(geospiza)
+str(BIC)
+str(geospiza)
+
+**2°Ejer:** 
+¿Qué tipo de variable es tarsusL y qué clase? 
+Abra el objeto *tortues* y mire ¿Qué tipo de variables tiene y qué clase son?, haga lo mismo con el objeto *mite.env* y revise ¿Qué tipo de variable es *shurb* y qué clase es? Recuerde siempre usar help para saber de donde vienen los datos.
+
+data("tortues")
+class(tortues)
+str(tortues)
+
+# las variables que encontramos en este data frame son 3 cuantitativas discretas y 1 cualitativa tipo nominal #
+long: num  
+larg: num  
+haut: num  
+sexe: Factor
+
+#para *mite.env*
+data(mite.env)
+class(mite.env)
+str(mite.env)
+
+#en este data frame encontramos 2 variables cuantitativas discretas y 3 cualitativas ordinales#
+SubsDens : num  
+WatrCont : num  
+Substrate: Factor w/ 7 levels 
+Shrub    : Ord.factor w/ 3 levels 
+Topo     : Factor 
+
+#para saber la clase de una de las variables se usa "$" #
+class(mite.env$Shrub)
+# la clase es factor
+
+**3°Ejer:** 
+usando el data.frame *tortues* calcule la proporción de hembras y machos de la muestra
+
+M <- length(which(tortues== 'M'))
+F <- length(which(tortues== "F"))
+paste(F,'/',M,sep = '')
+ F/M
+ #esto ultimo da como resultado 1 lo que indica que por cada macho hay una hembra
+ 
+ 
