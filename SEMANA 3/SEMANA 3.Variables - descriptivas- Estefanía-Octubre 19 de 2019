@@ -128,3 +128,38 @@ clos      open
 0.3928571 0.6071429 
 
 **6ejer** ¿Cómo luce el gráfico de frecuencias para los tipos de hábitat del género *Corvus*?
+  barplot(porcentaje_open,main = "FRECUENCIA DE TIPOS DE HABITAD",xlab = "Tipo de habitad ",ylab = "Frecuencia",col = "cyan1")
+
+
+*7°Ejer:** 
+encuentre el máximo, así como lo hizo para el mínimo
+ 
+# Sumar las ocurrencias de cada especie
+atlas$birds
+
+xsp<- apply(atlas$birds,2,sum)
+
+# Preguntar cuál es el mínimo 
+min(xsp)
+which.min(xsp)
+xsp[which.min(xsp)]
+
+# podríamos generar vectores
+
+min(xsp)
+x <- which.min(xsp)
+x
+xsp[x]
+
+# para hallar el maximo
+max(xsp)
+
+which.max(xsp)
+
+xsp[which.max(xsp)]
+
+**8°Ejer:** 
+Repita el ejercicio para las variables continuas de tamaño de pico y tamaño del ala en el género *Corvus*. Busque cómo cambiar colores, ejes y algunas propiedades que le permitan mejorar el diseño del histograma.
+
+hist(corvus$bill, col=rainbow(8), main = "PICO DE CORVUS" ,xlab = "Tamaño en(mm)")
+hist(corvus$wing,col=topo.colors(8), main = "ALAS DE CORVUS" ,xlab = "Tamaño en(mm)")
