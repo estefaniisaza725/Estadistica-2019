@@ -1,0 +1,48 @@
+Seman5_Distribuiciones_&_Teorema
+SOLUCION DE EJERCICIOS
+
+1°Ejer: ¿Cúal es la probabilidad de que 3 sean de fenotipo blanco?
+pbinom(3, size = 8, prob =0.25)
+
+2°Ejer:  ¿Cúal es la probabilidad de encontrar 6 semillas por bloque?, si el terreno es más pequeño (2x2m) y el promedio de semillas por bloque es de 10 Grafique todos los eventos de 0 a 50
+dpois(6 ,10)
+
+#graficar los eventos#
+plot(dpois(x = 0:50,lambda = 10),type="b")
+
+3°Ejer: A partir del tortues del paquete ade4, calcule el promedio y la desviación estándar de las alturas de caparazones de las tortugas.
+Haga el análisis por sexo y grafíquelo.
+
+# cargamos la tabla de donde sacaremos los datos#
+library(ade4)
+data("tortues")
+
+#creamos las variables#
+> MACHOS_LONG<-tortues$long[which(tortues$sexe=="M")]
+> HEMBRAS_LONG<-tortues$long[which(tortues$sexe=="F")]
+
+# procedemos a evaluar el promedio y la desviacion estandar
+
+promedio_machos<-mean(MACHOS_LONG)
+ promedio_hembras<-mean(HEMBRAS_LONG)
+ desviacion_machos<-sd(MACHOS_LONG)
+ desviacion_hembras<-sd(HEMBRAS_LONG)
+
+#para hacer el grafico representativo
+
+plot(tortues$long[which(tortues$sexe=="F")], main="Longitud de las hembras")
+plot(tortues$long[which(tortues$sexe=="M")], main="Longitud de los machos")
+
+4°Ejer: Simule 5000 peces de criadero en un tanque, todos son de la misma cohorte. Imagine que los organiza en fila y 
+quiere seleccionar 100 para calcular estadísticos de la población. 
+Haga un muestreo sistemático y calcule los estadísticos y descriptivos vistos anteriormente. Grafique.
+
+#creamos una variable que contenga los peces y las medidas de lo9s mimos
+estanque<-abs(rnorm(5000,0.3,3))
+
+ MUESTRA <- seq(10,5000,50) # Este comando nos da las posiciones de los 100 peces en nuestro tanque que contiene 5000
+ 
+#para unir las posiciones con los datos utilizamos los siguientes comandos 
+muestra_absoluta<-Estanque[MUESTRA]
+Media<-mean(muestra_absoluta)
+Desviacion<-sd(muestra_absoluta)
