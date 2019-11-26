@@ -18,9 +18,19 @@ tortues
 MEDIANA_DE_COLUMNAS<-apply(tortues[1:3],2,mean)
 
 3°Ejer: Genere una función propia que le permita encontrar la mediana, tal y como lo hizo con la media aritmética.
-
+mediana_estefa <-function(y){
+  q <- sort(y)
+  longitud <- length(q)
+  mitad <- (longitud/2)
+  mediana <- y[mitad]
+  return(mediana)}
 
 4°Ejer: Genere una función propia que le permita calcular la moda
+
+mi.moda <- function (n){
+  x <- table (n)
+  moda <- x [which.max(x)]
+  return(mode) }
 
 5°Ejer: Después de generar la función del cálculo de moda, grafíquela sobre el histograma.
 
