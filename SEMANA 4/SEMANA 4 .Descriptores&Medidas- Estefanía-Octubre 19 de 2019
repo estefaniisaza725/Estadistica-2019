@@ -1,1 +1,33 @@
+Semana3_Descriptores&Medidas
+SOLUCIÓN DE EJERCICIOS
 
+1°Ejer: Si la columna iris$Petal.Length tuviera valores ‘NA’, ¿Cómo podría eliminarlos antes de hacer la estimación de la media?
+
+# para resolver este problema podemos usar la funcion na.rm=TRUE en el comando , asi este identifica la columna que contenga NA
+
+2°Estime la media aritmética de la altura, la longitud y el ancho del caparazón de las tortugas pintadas [data(tortues), paquete: ade4], 
+use la función apply para obtener los estadísticos de cada medida en un mismo vector.
+
+# Inicialmente se cargan los datos necesarios para proceder con el ejercicio
+
+3°Ejer: Genere una función propia que le permita encontrar la mediana, tal y como lo hizo con la media aritmética.
+
+4°Ejer: Genere una función propia que le permita calcular la moda
+
+5°Ejer: Después de generar la función del cálculo de moda, grafíquela sobre el histograma.
+
+6°Ejer: Genere los cuantiles en intervalos de 0.5 Existen otras funciones que nos permiten generar cuartiles, 
+incluyendo información de tendencias centrales. Es decir, density() pero más resumido.
+
+7°Ejer: ¿Qué sucede si el número de columnas deseado no se especifica? Obtenga la mediana, 
+la moda y los cuantiles para cada especie de iris y para cada variable morfométrica.
+
+
+8°Ejer: grafique la distribución de frecuencias de cada población usando histograma y 
+densidad en el mismo gráfico. Adiciones la media, la mediana y la moda.
+
+9°
+
+10°
+
+11°
