@@ -37,15 +37,17 @@ mi.moda <- function (n){
 6°Ejer: Genere los cuantiles en intervalos de 0.5 Existen otras funciones que nos permiten generar cuartiles, 
 incluyendo información de tendencias centrales. Es decir, density() pero más resumido.
 
+PRIMER_Q<-quantile(setosa,probs = c(seq(0, 1, 0.25)))
+SEGUNDO_Q<-quantile(setosa,probs = c(seq(0, 1, 0.5)))
+TERCER_Q<-quantile(setosa,probs = c(seq(0, 1, 0.75)))
+CUARTO_Q<-quantile(setosa,probs = 1)
+
+
 7°Ejer: ¿Qué sucede si el número de columnas deseado no se especifica? Obtenga la mediana, 
 la moda y los cuantiles para cada especie de iris y para cada variable morfométrica.
 
+SIN_COLUMNAS<-c(aggregate(iris[,1:4], list(Especies = iris$Species), summary))
 
 8°Ejer: grafique la distribución de frecuencias de cada población usando histograma y 
 densidad en el mismo gráfico. Adiciones la media, la mediana y la moda.
 
-9°
-
-10°
-
-11°
